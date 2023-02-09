@@ -1,6 +1,6 @@
 import { Form, Input } from "antd";
 import { useContextAuth } from "../../context/auth/useContextAuth";
-import logo from "../../assets/car100.png";
+import logo from "../../assets/delivery.svg";
 import {
   ButtonSubmit,
   CardLogin,
@@ -24,11 +24,11 @@ export const Login = () => {
     visibility: alertVisibility,
   } as React.CSSProperties
 
-  async function onFinish(values: { username: string; password: string }) {
+  async function onFinish(values: { email: string; password: string }) {
     try {
-      await auth.authenticate(values.username, values.password);
+      await auth.authenticate(values.email, values.password);
       setAlertVisibility('hidden');
-     navigate("/home");
+      navigate("/home");
 
     } catch (error) {
       setAlertVisibility('visible');
@@ -46,11 +46,11 @@ export const Login = () => {
       </ContentLeft>
 
       <ContentRight>
-        <LoginErrorAlert style={showLoginErrorAlert} message="Error: User not found in system" type="error" showIcon />
-        
+        <LoginErrorAlert style={showLoginErrorAlert} message="Erro: Usuário não encontrado" type="error" showIcon />
+
         <CardLogin>
           <h1 className="login-form-title-1">Login</h1>
-             <Form
+          <Form
             name="login"
             layout="vertical"
             className="login-form"
@@ -64,23 +64,15 @@ export const Login = () => {
                   E-mail
                 </div>
               }
-              name="username"
+              name="email"
               hasFeedback
               rules={[
-                { required: true, message: "The email field is mandatory." },
-                {
-                  min: 3,
-                  message: "The email field must have at least 3 characters",
-                },
-                {
-                  max: 45,
-                  message:
-                    "The email field must have a maximum of 45 characters",
-                },
+                { required: true, message: "Campo obrigatório." },
+                { type: "email", message: "E-mail inválido." },
               ]}
             >
               <Input
-                placeholder="Enter email"
+                placeholder="Digite o e-mail"
                 prefix={<MailOutlined />}
                 autoFocus
               />
@@ -89,34 +81,34 @@ export const Login = () => {
             <FormItem
               label={
                 <div>
-                  Password
+                  Senha
                 </div>
               }
               name="password"
               hasFeedback
               rules={[
-                { required: true, message: "The password field is mandatory." },
+                { required: true, message: "Campo obrigatório." },
                 {
                   min: 3,
-                  message: "The password field must have at least 3 characters",
+                  message: "A senha deve conter pelo menos 3 caracteres",
                 },
                 {
                   max: 45,
                   message:
-                    "The password field must have a maximum of 45 characters",
+                    "A senha deve conter no máximo 20 caracteres",
                 },
               ]}
             >
               <Input.Password
                 visibilityToggle={false}
-                placeholder="Enter password"
+                placeholder="Digite a senha"
                 prefix={<KeyOutlined />}
               />
             </FormItem>
 
             <FormItem>
               <ButtonSubmit type="primary" htmlType="submit">
-                Login
+                Logar
               </ButtonSubmit>
             </FormItem>
           </Form>

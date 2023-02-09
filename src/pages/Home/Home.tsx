@@ -1,6 +1,7 @@
 //import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { getUsers, roleUser } from "../../services/user-service";
+import { IUser } from '../../interfaces/IUser';
 
 export function Home() {
   //const navigate = useNavigate();
@@ -31,8 +32,13 @@ export function Home() {
     <>
       <div className="tabs">
         <header>
-          <h1 data-testid={"title"}>Tathiane</h1>
-          {JSON.stringify(users)}
+          <h1 data-testid={"title"}>Home</h1>
+          {users && users.map((user: IUser ) => {
+            return (
+                <p key={user.id}>{user.name}</p>
+              )
+          }
+          )}
         </header>
       </div>
     </>

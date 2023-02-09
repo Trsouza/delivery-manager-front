@@ -1,6 +1,6 @@
-import { IAuthResponse } from '../interfaces/IAuth';
+// import { IAuthResponse } from '../interfaces/IAuth';
 
-//isLoggedIn=>
+import { IAuthResponse } from "../interfaces/IAuth";
 
 export const isLoggedIn = () => {
   let data = localStorage.getItem("user");
@@ -8,22 +8,15 @@ export const isLoggedIn = () => {
   else return false;
 };
 
-//doLogin=> data=>set to localstorage
-
-export const doLogin = (data: IAuthResponse, next: any) => {
-  localStorage.setItem("data", JSON.stringify(data));
-  next();
-};
-
-//doLogout=> remove from localStorage
-
-export const doLogout = (next: any) => {
+export const removeUserLocalStorage = () => {
   localStorage.removeItem("user");
-  next();
 };
 
-//get currentUser
-export const getCurrentUserDetail = () => {
+export const  setUserLocalStorage = (user: IAuthResponse | null) => {
+  localStorage.setItem('user', JSON.stringify(user));
+}
+
+export const getCurrentUserDetailLocalStorage = () => {
   if (isLoggedIn()) {
     return JSON.parse(localStorage.getItem("user") ?? "").user;
   } else {
@@ -31,10 +24,21 @@ export const getCurrentUserDetail = () => {
   }
 };
 
-export const getToken=()=>{
+export const getTokenLocalStorage = () =>{
   if(isLoggedIn()){
     return JSON.parse(localStorage.getItem("user") ?? "").token;
   }else{
     return null;
   }
+}
+
+export const getUserLocalStorage = () => {
+  const json = localStorage.getItem('user');
+
+  if (!json) {
+      return null;
+  }
+
+  const user = JSON.parse(json);
+  return user ?? null;
 }

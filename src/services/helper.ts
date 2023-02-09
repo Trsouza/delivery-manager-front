@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { getToken } from '../auth';
+import { getTokenLocalStorage } from '../auth';
 
 export const BASE_URL = 'http://localhost:8080';
 
@@ -17,7 +17,7 @@ export const privateAxios = axios.create({
 
 privateAxios.interceptors.request.use(
   (config) => {
-    const token = getToken();
+    const token = getTokenLocalStorage();
     if (token) {
       config.headers.Authorization = `Bearer ${token}`;
     }

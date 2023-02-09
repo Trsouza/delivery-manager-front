@@ -8,23 +8,31 @@ export const Container = styled.div`
   grid-template-columns: repeat(2, 1fr);
 
   h1 {
+    text-align: center;
     color: var(--white);
   }
 `;
 
 export const ContentLeft = styled.div`
-  background: var(--orange-300);
+  background: var(--orange-600);
   display: flex;
   flex-direction: column;
-  align-items: center;
+  
+  h1 {
+    font-size: 50px;
+    margin-top: 30px;
+    color: #ffffff;
+    margin-left: 180px
+  }
 `;
 
 export const IconStyle = styled.img`
-  margin-top: 16vh;
-  width: 30.2rem;
+  margin-top: 22vh;
+  margin-left: 50px;
+  width: 20.2rem;
 
   @media (max-width: 1400px) {
-    width: 31.2rem;
+    width: 21.2rem;
   }
 `;
 
@@ -64,8 +72,12 @@ export const ContentRight = styled.div`
 `;
 
 export const CardLogin = styled.div`
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 10px 1px rgb(0 0 0 / 20%);
+
   h1 {
-    color: var(--gray-800);
+    color: var(--blue-600);
     font-size: 3rem;
     font-weight: 500;
     line-height: 1.25rem;
