@@ -7,6 +7,8 @@ export const GlobalStyle = createGlobalStyle`
    --blue-601: #37D0EE;
    --purple-600: #9C34C2;
    --green-50: #E7F9ED;
+   --blue-800: #14208d;
+   --blue-900: #101A70;
 
   --orange-100: #F0E68C;
   --orange-200: #FFEFAD;
@@ -15,6 +17,8 @@ export const GlobalStyle = createGlobalStyle`
   --orange-700: #FFA500;
   --orange-800: #FF8C00;
   --orange-900: #FF4500;
+   /* background: #E65100; */
+
 
   --background: #FFFFFF;
   --blue-100: #D9F5FD;
@@ -22,9 +26,9 @@ export const GlobalStyle = createGlobalStyle`
   --blue-300: #5CC1EE;
   --blue-500: #0076CE;
   --blue-600: #0672CB;
-  --blue-700: #0063B8;
-  --blue-800: #00468B;
-  --blue-900: #002A58;
+  --blue-701: #0063B8;
+  --blue-8001: #00468B;
+  --blue-901: #002A58;
 
   --gray-100: #F5F6F7;
   --gray-200: #F9F9F9;
@@ -54,7 +58,7 @@ export const GlobalStyle = createGlobalStyle`
   --green-800: #2C5000;
   --green-900: #193100;
 
-  }
+}
 
   * {
     margin: 0;
@@ -77,10 +81,10 @@ export const GlobalStyle = createGlobalStyle`
     -webkit-font-smoothing: antialiased;
   }
 
-  body, input, textarea, button {
-    font-family: 'Poppins', sans-serif;
+  /* body, input, textarea, button {
+    font-family: "Poppins", sans-serif;
     font-weight: 400;
-  }
+  } */
 
   h1, h2, h3, h4, h5, h6, strong {
     font-weight: 600;
@@ -97,11 +101,3 @@ export const GlobalStyle = createGlobalStyle`
 
 `;
 
-export const PageContainer = styled.div`
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-
-  h1 {
-  color: var(--white);
-  }
-`;

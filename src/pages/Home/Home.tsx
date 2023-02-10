@@ -1,6 +1,6 @@
 //import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { getUsers, roleUser } from "../../services/user-service";
+import { getUsers } from "../../services/user-service";
 import { IUser } from '../../interfaces/IUser';
 
 export function Home() {
@@ -10,21 +10,13 @@ export function Home() {
 
   useEffect(() => {
 
-    roleUser().then(data => {
-      setUsers([...data])
-      console.log(data)
-    })
-    .catch(error => {
-          //console.log(error)
-    })
-
     getUsers().then(data => {
       setUsers([...data])
-      console.log(data)
+      console.log(data, " d")
     })
-    .catch(error => {
-          //console.log(error)
-    })
+      .catch(error => {
+        //console.log(error)
+      })
 
   }, []);
 
@@ -33,10 +25,13 @@ export function Home() {
       <div className="tabs">
         <header>
           <h1 data-testid={"title"}>Home</h1>
-          {users && users.map((user: IUser ) => {
+          {users?.length > 0 && users?.map((user: IUser) => {
+            console.log(users?.length, "a")
             return (
-                <p key={user.id}>{user.name}</p>
-              )
+              <div key={user?.id}>
+                <p>{user.name} </p>
+              </div>
+            )
           }
           )}
         </header>

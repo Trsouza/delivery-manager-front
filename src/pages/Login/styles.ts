@@ -1,43 +1,43 @@
-import styled from "styled-components";
-import { Form, Button, Alert } from "antd";
+import Styled from "styled-components";
+import { Form, Button, Alert, Col, Row } from "antd";
 
 const { Item } = Form;
 
-export const Container = styled.div`
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+export const Container = Styled.div`
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+  color: white;
+  padding: 20px;
+  background-image: linear-gradient(to bottom, #F1E0CC, #F0B065);
 
-  h1 {
-    text-align: center;
-    color: var(--white);
-  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
-export const ContentLeft = styled.div`
-  background: var(--orange-600);
+export const ContentLeft = Styled(Col)`
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const ContentRight = Styled(Col)`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+ 
+`;
+
+
+export const FormItem = Styled(Item)`
   
-  h1 {
-    font-size: 50px;
-    margin-top: 30px;
-    color: #ffffff;
-    margin-left: 180px
+  .ant-input-affix-wrapper {
+    height: 40px;
   }
-`;
 
-export const IconStyle = styled.img`
-  margin-top: 22vh;
-  margin-left: 50px;
-  width: 20.2rem;
-
-  @media (max-width: 1400px) {
-    width: 21.2rem;
-  }
-`;
-
-
-export const FormItem = styled(Item)`
   & .ant-form-item-label {
     color: var(--gray-900);
   }
@@ -62,48 +62,61 @@ export const FormItem = styled(Item)`
   }
 `;
 
-export const ContentRight = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  background: var(--white);
-`;
-
-export const CardLogin = styled.div`
-  padding: 30px;
+export const CardLogin = Styled.div`
+  padding: 45px 30px 35px 30px;
   border-radius: 5px;
   box-shadow: 1px 1px 10px 1px rgb(0 0 0 / 20%);
+  background-image: linear-gradient(to bottom, #F1E0CC, #F0B065);
+  width: 335px;
 
   h1 {
-    color: var(--blue-600);
-    font-size: 3rem;
-    font-weight: 500;
-    line-height: 1.25rem;
-    letter-spacing: 0.005em;
-    margin-bottom: 40px;
-
-    @media (max-width: 1200px) {
-      margin-top: 20%;
-    }
+    color: #fff;
+    font-size: 34px;
+    margin-bottom: 15px;
+    -webkit-text-stroke: 1px #FF8A00;
   }
+
 `;
 
-export const ButtonSubmit = styled(Button)`
-  width: 100%;
-  background: var(--orange-700);
-
+export const ButtonSubmit = Styled(Button)`
+  width: 120px;
+  background: var(--blue-800);
+  margin-top: 10px;
   transition: filter 0.2s;
+  border-radius: 100px;
 
   :hover, 
   :active,
   :focus {
-    background: var(--orange-800) !important;
+    background: var(--blue-900) !important;
   }
 `;
 
-export const LoginErrorAlert = styled(Alert)`
+export const TextLogin = Styled(Row)`
+  font-size: 12px;
+  margin: -16px;
+  padding: 25px 0 15px 0;
+
+  p {
+    margin-top: 6.7px;
+  }
+
+  button {
+    padding: 3px;
+    b {
+        color: #000000;
+    }
+    
+  }
+
+  button:hover {
+    text-decoration: underline;
+    color: #000000 !important;
+  }
+`;
+
+
+export const LoginErrorAlert = Styled(Alert)`
   position: absolute;
   margin-top: -90vh;
   width: 45vw;
