@@ -10,6 +10,7 @@ export const AuthProvider = ({ children }: IAuthProvider) => {
 
 	useEffect(() => {
 		const user = getUserLocalStorage();
+		console.log(user, "ois")
 		if (user) {
 			setUser(user);
 		}
@@ -29,7 +30,7 @@ export const AuthProvider = ({ children }: IAuthProvider) => {
 	}
 
 	return (
-		<AuthContext.Provider value={{ ...user, authenticate, logout }}>
+		<AuthContext.Provider value={{ signed: !!user, ...user, authenticate, logout }}>
 			{children}
 		</AuthContext.Provider>
 	)

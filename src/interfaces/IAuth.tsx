@@ -13,6 +13,7 @@ export interface IAuthResponse {
 export interface IContext extends IAuthResponse {
   authenticate: (email: string, password: string) => Promise<void>;
   logout: () => void;
+  signed: boolean;
 }
 
 export interface IAuthProvider {

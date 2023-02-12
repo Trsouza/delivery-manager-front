@@ -33,6 +33,12 @@ export const ContentRight = Styled(Col)`
 
 
 export const FormItem = Styled(Item)`
+
+  .ant-form-item-explain-error {
+    text-align: left;
+    font-size: 12px;
+    /* margin-bottom: 15px; */
+  }
   
   .ant-input-affix-wrapper {
     height: 40px;

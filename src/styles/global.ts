@@ -2,55 +2,51 @@ import styled, { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
  :root {
+
+    --background: #FFF9F1;
+    --white: #FFFFFF;
+    --black: #000000;
          
    --red-600: #D73343;
    --blue-601: #37D0EE;
    --purple-600: #9C34C2;
    --green-50: #E7F9ED;
-   --blue-800: #14208d;
-   --blue-900: #101A70;
-
-  --orange-100: #F0E68C;
-  --orange-200: #FFEFAD;
-  --orange-300: #FCE588;
-  --orange-600: #f9b73d;
-  --orange-700: #FFA500;
-  --orange-800: #FF8C00;
-  --orange-900: #FF4500;
-   /* background: #E65100; */
 
 
-  --background: #FFFFFF;
-  --blue-100: #D9F5FD;
-  --blue-200: #94DCF7;
-  --blue-300: #5CC1EE;
-  --blue-500: #0076CE;
-  --blue-600: #0672CB;
-  --blue-701: #0063B8;
-  --blue-8001: #00468B;
-  --blue-901: #002A58;
+   --blue-100: ;
+   --blue-200: #E8EAF6;
+   --blue-300: #C5CAE9;
+   --blue-400: #7986CB;
+   --blue-500: #3B48B8;
+   --blue-600: #2330A8;
+   --blue-700: #14208D;
+   --blue-800: #101A70;
 
-  --gray-100: #F5F6F7;
-  --gray-200: #F9F9F9;
-  --gray-300: #e1e1e1;
-  --gray-400: #CCCCCC;
-  --gray-600: #7E7E7E;
-  --gray-700: #6E6E6E;
-  --gray-800: #636363;
+  --orange-100: #FFF9F1;
+  --orange-200: #FFF3E0;
+  --orange-300: #FFE0B2;
+  --orange-400: #FFCC80;
+  --orange-500: #FF9800;
+  --orange-600: #F57C00;
+  --orange-700: #EF6C00;
+  --orange-800: #E15A11;
+  --orange-900: #E65100;
+  --orange-1000: #FF4500;
+
+  --gray-100: ;
+  --gray-200: #F5F6F7;
+  --gray-300: #CFD8DC;
+  --gray-400: #90A4AE;
+  --gray-500: #607D8B;
+  --gray-600: #455A64;
+  --gray-700: #37474F;
+  --gray-800: #263238;
   --gray-900: #0E0E0E;
 
   --red-100: #FFECEE;
-
   --red-700: #BB2A33;
   --red-800: #8C161F;
   --red-900: #590A0F;
-
-  --yellow-100: #FEEFCB;
-  --yellow-900: #442200;
-
-
-  --white: #ffffff;
-  --black: #000000;
 
   --green-100: #E9F5CE;
   --green-600: #4F7D00;
@@ -86,9 +82,6 @@ export const GlobalStyle = createGlobalStyle`
     font-weight: 400;
   } */
 
-  h1, h2, h3, h4, h5, h6, strong {
-    font-weight: 600;
-  }
 
   button {
     cursor: pointer;

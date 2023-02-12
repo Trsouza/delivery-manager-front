@@ -2,11 +2,13 @@
 import { useEffect, useState } from "react";
 import { getUsers } from "../../services/user-service";
 import { IUser } from '../../interfaces/IUser';
+import { useContextAuth } from "../../context/auth/useContextAuth";
 
-export function Home() {
+export function Index () {
   //const navigate = useNavigate();
 
   const [users, setUsers] = useState<any>();
+  const { user, signed } = useContextAuth();
 
   useEffect(() => {
 
@@ -24,7 +26,7 @@ export function Home() {
     <>
       <div className="tabs">
         <header>
-          <h1 data-testid={"title"}>Home</h1>
+          <h1 data-testid={"title"}>Index {user?.name}</h1>
           {users?.length > 0 && users?.map((user: IUser) => {
             console.log(users?.length, "a")
             return (
