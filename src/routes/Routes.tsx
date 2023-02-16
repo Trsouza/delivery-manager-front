@@ -7,6 +7,7 @@ import { Home } from '../pages/Home';
 import { Index } from '../pages/Index';
 import { Login } from '../pages/Login';
 import { Settings } from '../pages/Settings';
+import { Users } from '../pages/Users';
 
 export const AppRoutes = () => {
 	return (
@@ -23,9 +24,11 @@ export const AppRoutes = () => {
 				<Route path="login" element={<Login />} />
 			</Route>
 
+			{/* Rotas privadas */}
 			<Route element={<LayoutComponent><ProtectedRoutes /></LayoutComponent>}>
 				<Route path="/home" element={<Home />} />
 				<Route path="/settings" element={<Settings />} />
+				<Route path="/users" element={<Users />} />
 			</Route>
 
 			{/* <Route path="/" element={<Login />}>

@@ -1,15 +1,11 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import { Breadcrumb, Layout, Menu } from "antd";
 import type { MenuProps } from 'antd';
-import {
-  HomeOutlined,
-  LogoutOutlined,
-  UserOutlined,
-} from "@ant-design/icons";
-import { useNavigate } from "react-router-dom";
-import Logo from "../../assets/logo.svg";
 import * as Styled from "./styles";
+import * as Icon from "@ant-design/icons";
 import { useContextAuth } from "../../context/auth/useContextAuth";
+import Logo from "../../assets/logo.svg";
 
 interface IProps {
   children: React.ReactNode;
@@ -18,7 +14,7 @@ interface IProps {
 export const LayoutComponent: React.FC<IProps> = ({ children }) => {
   
   const navigate = useNavigate();
-  const { user } = useContextAuth();
+  const { user, logout } = useContextAuth();
 
 
   // const menuItems = [
@@ -81,12 +77,16 @@ export const LayoutComponent: React.FC<IProps> = ({ children }) => {
   }
 
   const items: MenuItem[] = [
-    getItem('Home',  'home', <HomeOutlined />, navigateToPage),
-    getItem('Usuários', 'sub1', <UserOutlined />, navigateToPage, [
-      getItem('Empresas', 'index'),
-      getItem('Entregadores',  'home3'),
-    ]),
-    getItem('Configurações',  'settings', <HomeOutlined />, navigateToPage),
+    getItem('Home',  'home', <Icon.HomeOutlined />, navigateToPage),
+    getItem('Usuários',  'users', <Icon.UserOutlined />, navigateToPage),
+    getItem('Configurações',  'settings', <Icon.SettingOutlined />, navigateToPage),
+
+    //getItem('Usuários', 'sub1', <UserOutlined />, navigateToPage, 
+    // [
+    //   getItem('Empresas', 'index'),
+    //   getItem('Entregadores',  'home3'),
+    // ]
+    //),
   ];
 
   return (
@@ -99,7 +99,7 @@ export const LayoutComponent: React.FC<IProps> = ({ children }) => {
 
           <Styled.ContainerUser>
             <Styled.ProfileName>{user?.name}</Styled.ProfileName>
-            <Styled.LogoutButton type="ghost"><LogoutOutlined /></Styled.LogoutButton>
+            <Styled.LogoutButton onClick={logout} type="ghost"><Icon.LogoutOutlined /></Styled.LogoutButton>
           </Styled.ContainerUser>
         </Styled.HeaderContainer>
       </Styled.MainHeader>
@@ -110,7 +110,7 @@ export const LayoutComponent: React.FC<IProps> = ({ children }) => {
 
         <Layout style={{ padding: "0 24px 7px", background: "var(--background)" }}>
           <Styled.BreadcrumbCustom>
-            <Breadcrumb.Item><HomeOutlined /></Breadcrumb.Item>
+            <Breadcrumb.Item><Icon.HomeOutlined /></Breadcrumb.Item>
           </Styled.BreadcrumbCustom>
           <Styled.ContentCustom>
             {children}

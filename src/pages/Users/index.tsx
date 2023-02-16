@@ -3,11 +3,12 @@ import { useEffect, useState } from "react";
 import { useContextAuth } from "../../context/auth/useContextAuth";
 import { getUsers } from "../../services/user-service";
 import { IUser } from '../../interfaces/IUser';
+import { UserTable } from '../../components/Tables/User';
 
-export function Home() {
+export function Users() {
   //const navigate = useNavigate();
 
-	const { user, signed } = useContextAuth();
+  const { user, signed } = useContextAuth();
   const [users, setUsers] = useState<any>();
 
   useEffect(() => {
@@ -21,22 +22,12 @@ export function Home() {
 
   }, []);
 
+
   return (
     <>
-      <div className="tabs">
-        <header>
-          <h1 data-testid={"title"}>Home  - {user?.name  }--- {signed.toString()}</h1>
-          {users?.length > 0 && users?.map((user: IUser) => {
-            console.log(users?.length, "a")
-            return (
-              <div key={user?.id}>
-                <p>{user.name} </p>
-              </div>
-            )
-          }
-          )}
-        </header>
-      </div>
+
+      <UserTable users={users} />
+
     </>
   );
 }

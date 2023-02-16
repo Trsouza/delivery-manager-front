@@ -1,7 +1,7 @@
 import { createContext, useEffect, useState } from "react";
 import { IContext, IAuthProvider, IAuthResponse } from "../../interfaces/IAuth";
 import { LoginRequest } from "../../services/auth";
-import { getUserLocalStorage, setUserLocalStorage } from "../../auth";
+import { getUserLocalStorage, setUserLocalStorage, removeUserLocalStorage } from "../../auth";
 
 export const AuthContext = createContext<IContext>({} as IContext);
 
@@ -26,7 +26,7 @@ export const AuthProvider = ({ children }: IAuthProvider) => {
 
 	function logout() {
 		setUser(null);
-		setUserLocalStorage(null);
+		removeUserLocalStorage();
 	}
 
 	return (

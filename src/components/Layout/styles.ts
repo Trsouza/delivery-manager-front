@@ -40,7 +40,7 @@ export const HeaderContainer = styled.div`
 export const BreadcrumbCustom = styled(Breadcrumb)`
   width: 100%;
   background: var(--white);
-  padding: 8px 15px;
+  padding: 8px 20px;
   margin: 7px 0;
   border-radius: 20px;
   box-shadow: 1px 1px 5px var(--gray-300);
