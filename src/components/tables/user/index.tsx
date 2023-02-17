@@ -1,7 +1,6 @@
 import { Button, Space } from "antd";
 import { ColumnsType } from "antd/lib/table";
 import type { PaginationProps } from 'antd';
-import { useEffect, useState } from "react";
 import { IUser } from "../../../interfaces/IUser";
 import * as Styled from "./styles";
 

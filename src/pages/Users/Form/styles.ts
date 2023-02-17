@@ -30,6 +30,7 @@ export const ContentRight = Styled(Col)`
   align-items: center;
   justify-content: center;
   margin-top: 20px;
+
 `;
 
 
@@ -67,6 +68,7 @@ export const FormItem = Styled(Item)`
     text-transform: none;
     color: var(--gray-900);
   }
+
 `;
 
 export const CardLogin = Styled.div`
@@ -74,7 +76,7 @@ export const CardLogin = Styled.div`
   border-radius: 5px;
   box-shadow: 1px 1px 10px 1px rgb(0 0 0 / 20%);
   background-image: linear-gradient(to bottom, #F1E0CC, #F0B065);
-  width: 335px;
+  width: 365px;
 
   h1 {
     color: #fff;
@@ -101,8 +103,9 @@ export const ButtonSubmit = Styled(Button)`
 
 export const TextLogin = Styled(Row)`
   font-size: 12px;
-  margin: -16px;
-  padding: 25px 0 15px 0;
+  padding: 5px 0 0px 0;
+  display: flex;
+  justify-content: center;
 
   p {
     margin-top: 7.69px;

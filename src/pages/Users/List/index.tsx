@@ -1,11 +1,11 @@
 //import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { useContextAuth } from "../../context/auth/useContextAuth";
-import { getUsers } from "../../services/user-service";
-import { IUser } from '../../interfaces/IUser';
-import { UserTable } from '../../components/Tables/User';
+import { useContextAuth } from "../../../context/auth/useContextAuth";
+import { getUsers } from "../../../services/user-service";
+import { IUser } from '../../../interfaces/IUser';
+import { UserTable } from '../../../components/Tables/User';
 
-export function Users() {
+export function UserList() {
   //const navigate = useNavigate();
 
   const { user, signed } = useContextAuth();

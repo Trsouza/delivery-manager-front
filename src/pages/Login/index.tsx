@@ -2,8 +2,9 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Button, Form, Input, Row } from "antd";
 import { useContextAuth } from "../../context/auth/useContextAuth";
-import { ReactComponent as Logo } from "../../assets/logo.svg";
-import { KeyOutlined, MailOutlined } from "@ant-design/icons";
+import { ReactComponent as Logo } from "../../assets/images/logo.svg";
+
+import { UnlockOutlined, MailOutlined } from "@ant-design/icons";
 import * as Styled from "./styles";
 
 export const Login = () => {
@@ -20,7 +21,7 @@ export const Login = () => {
       await auth.authenticate(values.email, values.password);
       setAlertVisibility('hidden');
       navigate("/home");
-
+      
     } catch (error) {
       setAlertVisibility('visible');
       setTimeout(() => {
@@ -28,11 +29,14 @@ export const Login = () => {
       }, 3000);
     }
   }
-
+  
+  const navigateToSignup = () => {
+    navigate("/signup");
+  }
   return (
     <>
       <Styled.Container>
-        <Styled.LoginErrorAlert style={showLoginErrorAlert} message="Erro: Usuário não encontrado" type="error" showIcon />
+        <Styled.LoginErrorAlert style={showLoginErrorAlert} message="Erro: Email ou senha inválidos" type="error" showIcon />
         <div id="container-background">
           <Row style={{height: "86%"}}>
             <Styled.ContentLeft span={11}>
@@ -60,7 +64,7 @@ export const Login = () => {
                     ]}
                   >
                     <Input
-                      placeholder="Digite o e-mail"
+                      placeholder="Email"
                       prefix={<MailOutlined />}
                       autoFocus
                     />
@@ -74,23 +78,11 @@ export const Login = () => {
                     // }
                     name="password"
                     hasFeedback
-                    rules={[
-                      { required: true, message: "Campo obrigatório." },
-                      {
-                        min: 3,
-                        message: "A senha deve conter pelo menos 3 caracteres",
-                      },
-                      {
-                        max: 45,
-                        message:
-                          "A senha deve conter no máximo 20 caracteres",
-                      },
-                    ]}
                   >
                     <Input.Password
-                      visibilityToggle={false}
-                      placeholder="Digite a senha"
-                      prefix={<KeyOutlined />}
+                      visibilityToggle={true}
+                      placeholder="Senha"
+                      prefix={<UnlockOutlined />}
                     />
                   </Styled.FormItem>
 
@@ -100,7 +92,7 @@ export const Login = () => {
                     </Styled.ButtonSubmit>
                   </Styled.FormItem>
                   
-                  <Styled.TextLogin><p>Ainda não possui uma conta?</p><Button type="link"><b>Cadastre-se</b></Button></Styled.TextLogin>
+                  <Styled.TextLogin><p>Ainda não possui uma conta?</p><Button onClick={navigateToSignup} type="link"><b>Cadastre-se.</b></Button></Styled.TextLogin>
 
                 </Form>
               </Styled.CardLogin>

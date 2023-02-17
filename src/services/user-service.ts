@@ -1,9 +1,4 @@
-import { IUser } from "../interfaces/IUser";
 import { privateAxios } from "./helper";
-
-export const signUp = (user: IUser) => {
-  return privateAxios.post("/user", user).then((response: any) => response.data);
-};
 
 export const getUser = (userId: number) => {
   return privateAxios.get(`/user/${userId}`).then((response: any) => response.data);

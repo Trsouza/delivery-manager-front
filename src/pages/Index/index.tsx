@@ -10,17 +10,17 @@ export function Index () {
   const [users, setUsers] = useState<any>();
   const { user, signed } = useContextAuth();
 
-  useEffect(() => {
+  // useEffect(() => {
 
-    getUsers().then(data => {
-      setUsers([...data])
-      console.log(data, " d")
-    })
-      .catch(error => {
-        //console.log(error)
-      })
+  //   getUsers().then(data => {
+  //     setUsers([...data])
+  //     console.log(data, " d")
+  //   })
+  //     .catch(error => {
+  //       //console.log(error)
+  //     })
 
-  }, []);
+  // }, []);
 
   return (
     <>

@@ -5,7 +5,7 @@ import type { MenuProps } from 'antd';
 import * as Styled from "./styles";
 import * as Icon from "@ant-design/icons";
 import { useContextAuth } from "../../context/auth/useContextAuth";
-import Logo from "../../assets/logo.svg";
+import Logo from "../../assets/images/logo.svg";
 
 interface IProps {
   children: React.ReactNode;
