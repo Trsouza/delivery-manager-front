@@ -10,7 +10,6 @@ export const AuthProvider = ({ children }: IAuthProvider) => {
 
 	useEffect(() => {
 		const user = getUserLocalStorage();
-		console.log(user, "ois")
 		if (user) {
 			setUser(user);
 		}

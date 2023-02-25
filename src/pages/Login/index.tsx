@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Button, Form, Input, Row } from "antd";
 import { useContextAuth } from "../../context/auth/useContextAuth";
@@ -6,28 +5,34 @@ import { ReactComponent as Logo } from "../../assets/images/logo.svg";
 
 import { UnlockOutlined, MailOutlined } from "@ant-design/icons";
 import * as Styled from "./styles";
+import ErrorAlert from "../../components/Alerts/ErrorAlert";
+import SuccessAlert from "../../components/Alerts/SuccessAlert";
 
 export const Login = () => {
   const auth = useContextAuth();
   const navigate = useNavigate();
-  const [alertVisibility, setAlertVisibility] = useState('hidden');
+  // const [alertVisibility, setAlertVisibility] = useState('hidden');
 
-  const showLoginErrorAlert = {
-    visibility: alertVisibility,
-  } as React.CSSProperties
+  // const showLoginErrorAlert = {
+  //   visibility: alertVisibility,
+  // } as React.CSSProperties
 
   async function onFinish(values: { email: string; password: string }) {
     try {
       await auth.authenticate(values.email, values.password);
-      setAlertVisibility('hidden');
+      // setAlertVisibility('hidden');
       navigate("/home");
-      
+      console.log("bbbbbb")
+      SuccessAlert("Login efetuado");
     } catch (error) {
-      setAlertVisibility('visible');
-      setTimeout(() => {
-        setAlertVisibility('hidden')
-      }, 3000);
+      console.log(error, " eee")
+      // setAlertVisibility('visible');
+      ErrorAlert("Email ou senha inválidos");
+      // setTimeout(() => {
+      //   setAlertVisibility('hidden')
+      // }, 3000);
     }
+
   }
   
   const navigateToSignup = () => {
@@ -36,7 +41,7 @@ export const Login = () => {
   return (
     <>
       <Styled.Container>
-        <Styled.LoginErrorAlert style={showLoginErrorAlert} message="Erro: Email ou senha inválidos" type="error" showIcon />
+        {/* <Styled.LoginErrorAlert style={showLoginErrorAlert} message="Erro: Email ou senha inválidos" type="error" showIcon /> */}
         <div id="container-background">
           <Row style={{height: "86%"}}>
             <Styled.ContentLeft span={11}>

@@ -13,3 +13,29 @@
   background-size: 100%;
   background-repeat: no-repeat;
 }
+
+.container-custom-error {
+  background: var(--red-100);
+  width: 40vw;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.msg-custom-error {
+  color: var(--red-700);
+}
+.container-custom-success {
+  background: var(--green-100);
+  width: 40vw;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.msg-custom-success {
+  color: var(--green-700);
+}
+.container-custom-success .ant-notification-notice-icon,
+.container-custom-error .ant-notification-notice-icon {
+  font-size: 16px;
+  margin-top: 4px;
+}
+.container-custom-success .ant-notification-notice-close,
+.container-custom-error .ant-notification-notice-close {
+  top: 8px
+}
