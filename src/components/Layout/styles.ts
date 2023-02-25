@@ -37,13 +37,27 @@ export const HeaderContainer = styled.div`
   justify-content: space-between;
 `;
 
-export const BreadcrumbCustom = styled(Breadcrumb)`
+export const BreadcrumbCustom = styled.div`
   width: 100%;
   background: var(--white);
   padding: 8px 20px;
   margin: 7px 0;
   border-radius: 20px;
   box-shadow: 1px 1px 5px var(--gray-300);
+
+  .ant-breadcrumb a:hover {
+    color: var(--orange-700) !important;
+    text-decoration: underline;
+    background: transparent;
+  }
+  .ant-breadcrumb a {
+    color: var(--gray-700) !important;
+    font-weight: 400;
+  }
+  .ant-breadcrumb li:last-child {
+    color: #000;
+    font-weight: 500;
+  }
 `;
 
 export const SideCustom = styled(Sider)`

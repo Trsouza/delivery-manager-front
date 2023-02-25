@@ -1,11 +1,12 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { Breadcrumb, Layout, Menu } from "antd";
+import { Layout, Menu } from "antd";
 import type { MenuProps } from 'antd';
-import * as Styled from "./styles";
+import * as S from "./styles";
 import * as Icon from "@ant-design/icons";
 import { useContextAuth } from "../../context/auth/useContextAuth";
 import Logo from "../../assets/images/logo.svg";
+import { BreadCrumb } from "../BreadCrumb";
 
 interface IProps {
   children: React.ReactNode;
@@ -15,6 +16,8 @@ export const LayoutComponent: React.FC<IProps> = ({ children }) => {
   
   const navigate = useNavigate();
   const { user, logout } = useContextAuth();
+
+  console.log(user?.roles)
 
 
   // const menuItems = [
@@ -71,7 +74,7 @@ export const LayoutComponent: React.FC<IProps> = ({ children }) => {
       key,
       icon,
       onClick,
-      children,
+      children
       
     } as MenuItem;
   }
@@ -91,30 +94,30 @@ export const LayoutComponent: React.FC<IProps> = ({ children }) => {
 
   return (
     <Layout style={{ minHeight: "100vh" }} className="">
-      <Styled.MainHeader>
-        <Styled.HeaderContainer>
-          <Styled.LogoContainer>
-            <Styled.Logo src={Logo} alt="Logo Delivery manager" />
-          </Styled.LogoContainer>
+      <S.MainHeader>
+        <S.HeaderContainer>
+          <S.LogoContainer>
+            <S.Logo src={Logo} alt="Logo Delivery manager" />
+          </S.LogoContainer>
 
-          <Styled.ContainerUser>
-            <Styled.ProfileName>{user?.name}</Styled.ProfileName>
-            <Styled.LogoutButton onClick={logout} type="ghost"><Icon.LogoutOutlined /></Styled.LogoutButton>
-          </Styled.ContainerUser>
-        </Styled.HeaderContainer>
-      </Styled.MainHeader>
+          <S.ContainerUser>
+            <S.ProfileName>{user?.name}</S.ProfileName>
+            <S.LogoutButton onClick={logout} type="ghost"><Icon.LogoutOutlined /></S.LogoutButton>
+          </S.ContainerUser>
+        </S.HeaderContainer>
+      </S.MainHeader>
       <Layout style={{ background: "var(--background)" }}>
-        <Styled.SideCustom collapsible>
+        <S.SideCustom collapsible>
           <Menu theme="dark" defaultSelectedKeys={["1"]} mode="inline" items={items} />
-        </Styled.SideCustom>
+        </S.SideCustom>
 
         <Layout style={{ padding: "0 24px 7px", background: "var(--background)" }}>
-          <Styled.BreadcrumbCustom>
-            <Breadcrumb.Item><Icon.HomeOutlined /></Breadcrumb.Item>
-          </Styled.BreadcrumbCustom>
-          <Styled.ContentCustom>
+          <S.BreadcrumbCustom>
+            <BreadCrumb />
+          </S.BreadcrumbCustom>
+          <S.ContentCustom>
             {children}
-          </Styled.ContentCustom>
+          </S.ContentCustom>
         </Layout>
       </Layout>
     </Layout>
