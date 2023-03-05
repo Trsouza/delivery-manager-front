@@ -1,5 +1,5 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate, Link } from "react-router-dom";
 import { Layout, Menu } from "antd";
 import type { MenuProps } from 'antd';
 import * as S from "./styles";
@@ -8,14 +8,16 @@ import { useContextAuth } from "../../context/auth/useContextAuth";
 import Logo from "../../assets/images/logo.svg";
 import { BreadCrumb } from "../BreadCrumb";
 
+
 interface IProps {
   children: React.ReactNode;
 }
 
 export const LayoutComponent: React.FC<IProps> = ({ children }) => {
-  
+
   const navigate = useNavigate();
   const { user, logout } = useContextAuth();
+  const location = useLocation();
 
   // console.log(user?.roles)
 
@@ -56,8 +58,8 @@ export const LayoutComponent: React.FC<IProps> = ({ children }) => {
   // ];
 
   const navigateToPage = (route: any) => {
-     navigate("/"+route?.key);
- }
+    navigate("/" + route?.key);
+  }
 
   type MenuItem = Required<MenuProps>['items'][number];
 
@@ -74,15 +76,20 @@ export const LayoutComponent: React.FC<IProps> = ({ children }) => {
       key,
       icon,
       onClick,
-      children
-      
+      children,
+
     } as MenuItem;
   }
 
-  const items: MenuItem[] = [
-    getItem('Home',  'home', <Icon.HomeOutlined />, navigateToPage),
-    getItem('Usuários',  'users', <Icon.UserOutlined />, navigateToPage),
-    getItem('Configurações',  'settings', <Icon.SettingOutlined />, navigateToPage),
+  const admItems: MenuItem[] = [
+    getItem('Home', 'home', <Icon.HomeOutlined />, navigateToPage),
+    getItem('Usuários', 'users', <Icon.UserOutlined />, navigateToPage),
+    getItem(
+      <Link to="/settings">Configurações</Link>,
+      'settings',
+      <Icon.SettingOutlined />,
+      // navigateToPage
+    )
 
     //getItem('Usuários', 'sub1', <UserOutlined />, navigateToPage, 
     // [
@@ -90,6 +97,11 @@ export const LayoutComponent: React.FC<IProps> = ({ children }) => {
     //   getItem('Entregadores',  'home3'),
     // ]
     //),
+  ];
+
+  const userItems: MenuItem[] = [
+    getItem('Home', 'home', <Icon.HomeOutlined />, navigateToPage),
+    getItem('Configurações', 'settings', <Icon.SettingOutlined />, navigateToPage),
   ];
 
   return (
@@ -108,7 +120,7 @@ export const LayoutComponent: React.FC<IProps> = ({ children }) => {
       </S.MainHeader>
       <Layout style={{ background: "var(--background)" }}>
         <S.SideCustom collapsible>
-          <Menu theme="dark" defaultSelectedKeys={["1"]} mode="inline" items={items} />
+          <Menu theme="dark" defaultSelectedKeys={["1"]} mode="inline" items={!user?.roles.includes("ADM") ? userItems : admItems} />
         </S.SideCustom>
 
         <Layout style={{ padding: "0 24px 7px", background: "var(--background)" }}>

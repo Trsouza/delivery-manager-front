@@ -159,6 +159,10 @@ export const SideCustom = styled(Sider)`
     background: var(--orange-700) !important;
   }
 
+  .ant-menu-item a:hover {
+    color: var(--white) !important;
+  }
+
 `;
 
 export const ContainerUser = styled.div`
