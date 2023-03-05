@@ -17,7 +17,19 @@ import { useContextAuth } from '../../context/auth/useContextAuth';
 
 // }
 
-export const ProtectedRoutes = () => {
-  const { signed } = useContextAuth();
-  return signed ? <Outlet /> : <Navigate to="/login" />
-}
+// export const ProtectedRoutes = ({ allowedRoles }: any) => {
+//   const { signed, user } = useContextAuth();
+//   console.log(user?.roles.find(role => allowedRoles?.includes(role)), "a", user?.roles, allowedRoles);
+//   return signed ? <Outlet /> 
+//             : <Navigate to="/login" />
+//   }
+
+
+  export const ProtectedRoutes = ({ allowedRoles }: any) => {
+    const { signed, user } = useContextAuth();
+    return signed && !!user?.roles.find(role => allowedRoles?.includes(role)) 
+            ? <Outlet /> 
+            : signed
+              ? <Navigate to="/unauthorized" />
+              : <Navigate to="/login" /> // Se a página existir e o usuário estiver logado encaminhara para o login
+    }

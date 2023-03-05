@@ -13,7 +13,6 @@ export function Couriers () {
   useEffect(() => {
     getUsers().then(data => {
       setUsers([...data])
-      console.log(data, " d")
     })
       .catch(error => {
         //console.log(error)
@@ -27,7 +26,6 @@ export function Couriers () {
         <header>
           <h1 data-testid={"title"}>Couriers  - {user?.name  }--- {signed.toString()}</h1>
           {users?.length > 0 && users?.map((user: IUser) => {
-            console.log(users?.length, "a")
             return (
               <div key={user?.id}>
                 <p>{user.name} </p>

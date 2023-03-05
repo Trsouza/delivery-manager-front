@@ -14,6 +14,7 @@ export interface IContext extends IAuthResponse {
   authenticate: (email: string, password: string) => Promise<void>;
   logout: () => void;
   signed: boolean;
+  isLoading: boolean;
 }
 
 export interface IAuthProvider {

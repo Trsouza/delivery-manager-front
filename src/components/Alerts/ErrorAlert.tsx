@@ -13,7 +13,7 @@ function preNotification () {
   notification.config({
     top: 8,
     placement: "top",
-    duration: 80000,
+    duration: 4.0,
 
   });
 }

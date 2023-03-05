@@ -17,7 +17,7 @@ export const LayoutComponent: React.FC<IProps> = ({ children }) => {
   const navigate = useNavigate();
   const { user, logout } = useContextAuth();
 
-  console.log(user?.roles)
+  // console.log(user?.roles)
 
 
   // const menuItems = [

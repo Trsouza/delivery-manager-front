@@ -14,7 +14,6 @@ export function UserList() {
   useEffect(() => {
     getUsers().then(data => {
       setUsers([...data])
-      console.log(data, " d")
     })
       .catch(error => {
         //console.log(error)

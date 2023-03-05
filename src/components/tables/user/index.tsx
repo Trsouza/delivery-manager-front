@@ -77,7 +77,7 @@ console.log(props.users);
         rowKey="id"
         pagination={{
           // showTotal: (total, range) => `${range[0]}-${range[1]} de ${total} usuários`,
-          defaultPageSize: 2,
+          defaultPageSize: 15,
           defaultCurrent: 1,
           itemRender: itemRender,
           position: ["bottomCenter"],

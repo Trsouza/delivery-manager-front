@@ -1,4 +1,5 @@
-import { createGlobalStyle } from "styled-components";
+import Styled, { createGlobalStyle } from "styled-components";
+import { Button } from "antd";
 
 export const GlobalStyle = createGlobalStyle`
  :root {
@@ -95,3 +96,36 @@ export const GlobalStyle = createGlobalStyle`
 
 `;
 
+export const Container = Styled.div`
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const Box = Styled.div`
+  width: 450px;
+  height: 250px;
+  background: var(--orange-600);
+  padding: 50px;
+  text-align: center;
+  color: var(--blue-700);
+  border-radius: 10px;
+
+`;
+
+export const ButtonStyled = Styled(Button)`
+  color: var(--blue-700);
+  margin-top: 24px;
+
+  :hover, 
+  :active,
+  :focus {
+    color: var(--blue-900) !important;
+    background: var(--orange-200)!important;
+    import { Button } from 'reactstrap';
+
+  }
+`;
