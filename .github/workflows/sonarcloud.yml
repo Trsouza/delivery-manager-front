@@ -42,6 +42,8 @@ jobs:
   Analysis:
     runs-on: ubuntu-latest
 
+     if: "!contains(github.event.head_commit.message, '[ci skip]')" # Desativa a análise via CI, visto que no sonarCloud já está habilitado
+
     steps:
       - name: Analyze with SonarCloud
 
