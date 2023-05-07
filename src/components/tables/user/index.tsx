@@ -6,12 +6,10 @@ import * as Styled from "./styles";
 
 interface IProps {
   users: IUser[];
-  // viewFunction: Function;
 }
 
 export function UserTable(props: IProps) {
-  //const navigate = useNavigate();
-console.log(props.users);
+  console.log(props.users);
 
   const columns: ColumnsType<IUser> = [
 
@@ -28,7 +26,7 @@ console.log(props.users);
       width: "30%",
       render: (_text, record) => (
         <Space size="middle">
-          { record.email }
+          {record.email}
 
         </Space>
       )
@@ -55,7 +53,7 @@ console.log(props.users);
             Teste
           </Button> */}
         </Space>
-      ),  
+      ),
     },
 
   ];
@@ -69,20 +67,20 @@ console.log(props.users);
     }
     return originalElement;
   };
-  
+
   return (
     <Styled.TableCustom
-        columns={columns}
-        dataSource={props.users}
-        rowKey="id"
-        pagination={{
-          // showTotal: (total, range) => `${range[0]}-${range[1]} de ${total} usuários`,
-          defaultPageSize: 15,
-          defaultCurrent: 1,
-          itemRender: itemRender,
-          position: ["bottomCenter"],
+      columns={columns}
+      dataSource={props.users}
+      rowKey="id"
+      pagination={{
+        // showTotal: (total, range) => `${range[0]}-${range[1]} de ${total} usuários`,
+        defaultPageSize: 15,
+        defaultCurrent: 1,
+        itemRender: itemRender,
+        position: ["bottomCenter"],
 
-        }}
-      />
+      }}
+    />
   );
 }
