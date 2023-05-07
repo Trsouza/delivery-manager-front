@@ -31,5 +31,5 @@ import { useContextAuth } from '../../context/auth/useContextAuth';
             ? <Outlet /> 
             : signed
               ? <Navigate to="/unauthorized" />
-              : <Navigate to="/login" /> // Se a página existir e o usuário estiver logado encaminhara para o login
+              : <Navigate to="/login" /> // Se a página existir e o usuário não estiver logado encaminhara para o login
     }

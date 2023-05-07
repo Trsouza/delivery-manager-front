@@ -9,7 +9,6 @@ import * as Styled from "./styles";
 import { IUser } from "../../../interfaces/IUser";
 import { signUpEmployee } from "../../../services/employee-service";
 import { signUpCompany } from "../../../services/company-service";
-import { IEmployee } from '../../../interfaces/IEmployee';
 
 export const UserForm = () => {
   const navigate = useNavigate();
@@ -23,7 +22,7 @@ export const UserForm = () => {
   async function onFinish(user: IUser) {
     console.log(user);
 
-    let userResult: any; 
+    let userResult: any;
 
     if (showInputEmployee) {
       userResult = {

@@ -1,38 +1,11 @@
-//import { useNavigate } from "react-router-dom";
-import { useEffect, useState } from "react";
-import { useContextAuth } from "../../context/auth/useContextAuth";
-import { getUsers } from "../../services/user-service";
-import { IUser } from '../../interfaces/IUser';
 
-export function Couriers () {
-  //const navigate = useNavigate();
-
-	const { user, signed } = useContextAuth();
-  const [users, setUsers] = useState<any>();
-
-  useEffect(() => {
-    getUsers().then(data => {
-      setUsers([...data])
-    })
-      .catch(error => {
-        //console.log(error)
-      })
-
-  }, []);
+export function Couriers() {
 
   return (
     <>
-      <div className="tabs">
+      <div className="">
         <header>
-          <h1 data-testid={"title"}>Couriers  - {user?.name  }--- {signed.toString()}</h1>
-          {users?.length > 0 && users?.map((user: IUser) => {
-            return (
-              <div key={user?.id}>
-                <p>{user.name} </p>
-              </div>
-            )
-          }
-          )}
+          <h1 data-testid={"title"}>Teste</h1>
         </header>
       </div>
     </>
