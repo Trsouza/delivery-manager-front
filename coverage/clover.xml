@@ -1,8 +1,140 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1683485576125" clover="3.2.0">
-  <project timestamp="1683485576125" name="All files">
-    <metrics statements="35" coveredstatements="1" conditionals="26" coveredconditionals="0" methods="12" coveredmethods="1" elements="73" coveredelements="2" complexity="0" loc="35" ncloc="35" packages="4" files="4" classes="4"/>
-    <package name="components.ProtectedRoutes">
+<coverage generated="1683487864217" clover="3.2.0">
+  <project timestamp="1683487864218" name="All files">
+    <metrics statements="243" coveredstatements="1" conditionals="86" coveredconditionals="0" methods="75" coveredmethods="1" elements="404" coveredelements="2" complexity="0" loc="243" ncloc="243" packages="23" files="38" classes="38"/>
+    <package name="src">
+      <metrics statements="12" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="3" coveredmethods="0"/>
+      <file name="App.tsx" path="C:\Users\tathianesouza\Documents\Github\delivery-manager-front\src\App.tsx">
+        <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="10" count="0" type="stmt"/>
+      </file>
+      <file name="index.tsx" path="C:\Users\tathianesouza\Documents\Github\delivery-manager-front\src\index.tsx">
+        <metrics statements="3" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+      </file>
+      <file name="reportWebVitals.ts" path="C:\Users\tathianesouza\Documents\Github\delivery-manager-front\src\reportWebVitals.ts">
+        <metrics statements="8" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="4" count="0" type="cond" truecount="0" falsecount="4"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.auth">
+      <metrics statements="22" coveredstatements="0" conditionals="14" coveredconditionals="0" methods="6" coveredmethods="0"/>
+      <file name="index.ts" path="C:\Users\tathianesouza\Documents\Github\delivery-manager-front\src\auth\index.ts">
+        <metrics statements="22" coveredstatements="0" conditionals="14" coveredconditionals="0" methods="6" coveredmethods="0"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="7" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="20" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="21" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="28" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="29" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="35" count="0" type="stmt"/>
+        <line num="36" count="0" type="stmt"/>
+        <line num="38" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="39" count="0" type="stmt"/>
+        <line num="42" count="0" type="stmt"/>
+        <line num="43" count="0" type="cond" truecount="0" falsecount="2"/>
+      </file>
+    </package>
+    <package name="src.components.Alerts">
+      <metrics statements="10" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="0"/>
+      <file name="ErrorAlert.tsx" path="C:\Users\tathianesouza\Documents\Github\delivery-manager-front\src\components\Alerts\ErrorAlert.tsx">
+        <metrics statements="5" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+      </file>
+      <file name="SuccessAlert.tsx" path="C:\Users\tathianesouza\Documents\Github\delivery-manager-front\src\components\Alerts\SuccessAlert.tsx">
+        <metrics statements="5" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.BreadCrumb">
+      <metrics statements="24" coveredstatements="0" conditionals="20" coveredconditionals="0" methods="6" coveredmethods="0"/>
+      <file name="index.tsx" path="C:\Users\tathianesouza\Documents\Github\delivery-manager-front\src\components\BreadCrumb\index.tsx">
+        <metrics statements="24" coveredstatements="0" conditionals="20" coveredconditionals="0" methods="6" coveredmethods="0"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="17" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="38" count="0" type="stmt"/>
+        <line num="39" count="0" type="stmt"/>
+        <line num="40" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="41" count="0" type="stmt"/>
+        <line num="46" count="0" type="cond" truecount="0" falsecount="4"/>
+        <line num="47" count="0" type="stmt"/>
+        <line num="54" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="55" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="56" count="0" type="stmt"/>
+        <line num="58" count="0" type="stmt"/>
+        <line num="61" count="0" type="cond" truecount="0" falsecount="4"/>
+        <line num="62" count="0" type="stmt"/>
+        <line num="64" count="0" type="stmt"/>
+        <line num="70" count="0" type="stmt"/>
+        <line num="78" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.Layout">
+      <metrics statements="22" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="3" coveredmethods="0"/>
+      <file name="index.tsx" path="C:\Users\tathianesouza\Documents\Github\delivery-manager-front\src\components\Layout\index.tsx">
+        <metrics statements="10" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="3" coveredmethods="0"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="60" count="0" type="stmt"/>
+        <line num="61" count="0" type="stmt"/>
+        <line num="74" count="0" type="stmt"/>
+        <line num="84" count="0" type="stmt"/>
+        <line num="102" count="0" type="stmt"/>
+        <line num="107" count="0" type="stmt"/>
+      </file>
+      <file name="styles.ts" path="C:\Users\tathianesouza\Documents\Github\delivery-manager-front\src\components\Layout\styles.ts">
+        <metrics statements="12" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="33" count="0" type="stmt"/>
+        <line num="40" count="0" type="stmt"/>
+        <line num="63" count="0" type="stmt"/>
+        <line num="168" count="0" type="stmt"/>
+        <line num="172" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.ProtectedRoutes">
       <metrics statements="3" coveredstatements="0" conditionals="6" coveredconditionals="0" methods="2" coveredmethods="0"/>
       <file name="index.tsx" path="C:\Users\tathianesouza\Documents\Github\delivery-manager-front\src\components\ProtectedRoutes\index.tsx">
         <metrics statements="3" coveredstatements="0" conditionals="6" coveredconditionals="0" methods="2" coveredmethods="0"/>
@@ -11,15 +143,159 @@
         <line num="30" count="0" type="cond" truecount="0" falsecount="4"/>
       </file>
     </package>
-    <package name="pages.Couriers">
+    <package name="src.components.PublicRoutes">
+      <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <file name="index.tsx" path="C:\Users\tathianesouza\Documents\Github\delivery-manager-front\src\components\PublicRoutes\index.tsx">
+        <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.Tables.User">
+      <metrics statements="12" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="5" coveredmethods="0"/>
+      <file name="index.tsx" path="C:\Users\tathianesouza\Documents\Github\delivery-manager-front\src\components\Tables\User\index.tsx">
+        <metrics statements="11" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="5" coveredmethods="0"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="42" count="0" type="stmt"/>
+        <line num="63" count="0" type="stmt"/>
+        <line num="64" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="65" count="0" type="stmt"/>
+        <line num="67" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="68" count="0" type="stmt"/>
+        <line num="70" count="0" type="stmt"/>
+        <line num="73" count="0" type="stmt"/>
+      </file>
+      <file name="styles.ts" path="C:\Users\tathianesouza\Documents\Github\delivery-manager-front\src\components\Tables\User\styles.ts">
+        <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="5" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.context.auth">
+      <metrics statements="19" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="5" coveredmethods="0"/>
+      <file name="AuthProvider.tsx" path="C:\Users\tathianesouza\Documents\Github\delivery-manager-front\src\context\auth\AuthProvider.tsx">
+        <metrics statements="16" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="4" coveredmethods="0"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="16" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="34" count="0" type="stmt"/>
+      </file>
+      <file name="useContextAuth.tsx" path="C:\Users\tathianesouza\Documents\Github\delivery-manager-front\src\context\auth\useContextAuth.tsx">
+        <metrics statements="3" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.interfaces">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="IAuth.tsx" path="C:\Users\tathianesouza\Documents\Github\delivery-manager-front\src\interfaces\IAuth.tsx">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="ICompany.tsx" path="C:\Users\tathianesouza\Documents\Github\delivery-manager-front\src\interfaces\ICompany.tsx">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="IEmployee.tsx" path="C:\Users\tathianesouza\Documents\Github\delivery-manager-front\src\interfaces\IEmployee.tsx">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="IUser.tsx" path="C:\Users\tathianesouza\Documents\Github\delivery-manager-front\src\interfaces\IUser.tsx">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="src.pages.Couriers">
       <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="index.tsx" path="C:\Users\tathianesouza\Documents\Github\delivery-manager-front\src\pages\Couriers\index.tsx">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="4" count="1" type="stmt"/>
       </file>
     </package>
-    <package name="pages.Users.Form">
-      <metrics statements="31" coveredstatements="0" conditionals="20" coveredconditionals="0" methods="9" coveredmethods="0"/>
+    <package name="src.pages.Home">
+      <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <file name="index.tsx" path="C:\Users\tathianesouza\Documents\Github\delivery-manager-front\src\pages\Home\index.tsx">
+        <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.pages.Index">
+      <metrics statements="5" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="0"/>
+      <file name="index.tsx" path="C:\Users\tathianesouza\Documents\Github\delivery-manager-front\src\pages\Index\index.tsx">
+        <metrics statements="5" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="32" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.pages.Login">
+      <metrics statements="22" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
+      <file name="index.tsx" path="C:\Users\tathianesouza\Documents\Github\delivery-manager-front\src\pages\Login\index.tsx">
+        <metrics statements="13" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="38" count="0" type="stmt"/>
+        <line num="39" count="0" type="stmt"/>
+        <line num="41" count="0" type="stmt"/>
+      </file>
+      <file name="styles.ts" path="C:\Users\tathianesouza\Documents\Github\delivery-manager-front\src\pages\Login\styles.ts">
+        <metrics statements="9" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="36" count="0" type="stmt"/>
+        <line num="72" count="0" type="stmt"/>
+        <line num="88" count="0" type="stmt"/>
+        <line num="102" count="0" type="stmt"/>
+        <line num="126" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.pages.NotFound">
+      <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <file name="index.tsx" path="C:\Users\tathianesouza\Documents\Github\delivery-manager-front\src\pages\NotFound\index.tsx">
+        <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="6" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.pages.Settings">
+      <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <file name="index.tsx" path="C:\Users\tathianesouza\Documents\Github\delivery-manager-front\src\pages\Settings\index.tsx">
+        <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.pages.Unauthorized">
+      <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <file name="index.tsx" path="C:\Users\tathianesouza\Documents\Github\delivery-manager-front\src\pages\Unauthorized\index.tsx">
+        <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="9" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.pages.Users.Form">
+      <metrics statements="40" coveredstatements="0" conditionals="20" coveredconditionals="0" methods="9" coveredmethods="0"/>
       <file name="index.tsx" path="C:\Users\tathianesouza\Documents\Github\delivery-manager-front\src\pages\Users\Form\index.tsx">
         <metrics statements="31" coveredstatements="0" conditionals="20" coveredconditionals="0" methods="9" coveredmethods="0"/>
         <line num="13" count="0" type="stmt"/>
@@ -54,8 +330,99 @@
         <line num="204" count="0" type="stmt"/>
         <line num="222" count="0" type="cond" truecount="0" falsecount="2"/>
       </file>
+      <file name="styles.ts" path="C:\Users\tathianesouza\Documents\Github\delivery-manager-front\src\pages\Users\Form\styles.ts">
+        <metrics statements="9" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="37" count="0" type="stmt"/>
+        <line num="74" count="0" type="stmt"/>
+        <line num="90" count="0" type="stmt"/>
+        <line num="104" count="0" type="stmt"/>
+        <line num="129" count="0" type="stmt"/>
+      </file>
     </package>
-    <package name="tests">
+    <package name="src.pages.Users.List">
+      <metrics statements="6" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="0"/>
+      <file name="index.tsx" path="C:\Users\tathianesouza\Documents\Github\delivery-manager-front\src\pages\Users\List\index.tsx">
+        <metrics statements="6" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="0"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="25" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.routes">
+      <metrics statements="4" coveredstatements="0" conditionals="6" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <file name="Routes.tsx" path="C:\Users\tathianesouza\Documents\Github\delivery-manager-front\src\routes\Routes.tsx">
+        <metrics statements="4" coveredstatements="0" conditionals="6" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="28" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.services">
+      <metrics statements="29" coveredstatements="0" conditionals="6" coveredconditionals="0" methods="14" coveredmethods="0"/>
+      <file name="auth.ts" path="C:\Users\tathianesouza\Documents\Github\delivery-manager-front\src\services\auth.ts">
+        <metrics statements="4" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+      </file>
+      <file name="company-service.ts" path="C:\Users\tathianesouza\Documents\Github\delivery-manager-front\src\services\company-service.ts">
+        <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
+      </file>
+      <file name="employee-service.ts" path="C:\Users\tathianesouza\Documents\Github\delivery-manager-front\src\services\employee-service.ts">
+        <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
+      </file>
+      <file name="helper.ts" path="C:\Users\tathianesouza\Documents\Github\delivery-manager-front\src\services\helper.ts">
+        <metrics statements="9" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="21" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+      </file>
+      <file name="user-service.ts" path="C:\Users\tathianesouza\Documents\Github\delivery-manager-front\src\services\user-service.ts">
+        <metrics statements="12" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="7" coveredmethods="0"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="15" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="17" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.styles">
+      <metrics statements="4" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="global.ts" path="C:\Users\tathianesouza\Documents\Github\delivery-manager-front\src\styles\global.ts">
+        <metrics statements="4" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="99" count="0" type="stmt"/>
+        <line num="108" count="0" type="stmt"/>
+        <line num="119" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.tests">
       <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="App.testee.tsx" path="C:\Users\tathianesouza\Documents\Github\delivery-manager-front\src\tests\App.testee.tsx">
         <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
