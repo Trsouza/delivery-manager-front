@@ -1,26 +1,12 @@
 //import { useNavigate } from "react-router-dom";
-import { useEffect, useState } from "react";
-import { getUsers } from "../../services/user-service";
+import { useState } from "react";
 import { IUser } from '../../interfaces/IUser';
 import { useContextAuth } from "../../context/auth/useContextAuth";
 
-export function Index () {
-  //const navigate = useNavigate();
+export function Index() {
 
-  const [users, setUsers] = useState<any>();
-  const { user, signed } = useContextAuth();
-
-  // useEffect(() => {
-
-  //   getUsers().then(data => {
-  //     setUsers([...data])
-  //     console.log(data, " d")
-  //   })
-  //     .catch(error => {
-  //       //console.log(error)
-  //     })
-
-  // }, []);
+  const [users] = useState<any>();
+  const { user } = useContextAuth();
 
   return (
     <>

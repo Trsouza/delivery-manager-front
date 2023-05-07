@@ -1,5 +1,5 @@
 import React from "react";
-import { useLocation, useNavigate, Link } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { Layout, Menu } from "antd";
 import type { MenuProps } from 'antd';
 import * as S from "./styles";
@@ -17,7 +17,6 @@ export const LayoutComponent: React.FC<IProps> = ({ children }) => {
 
   const navigate = useNavigate();
   const { user, logout } = useContextAuth();
-  const location = useLocation();
 
   // console.log(user?.roles)
 
